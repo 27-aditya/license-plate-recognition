@@ -47,7 +47,7 @@ def clean_text(text):
 
 # Main pipeline to detect and recognize license plate
 def license_plate_recognition(image):
-    image_resized = cv2.resize(image, (600, 400))
+    image_resized = cv2.resize(image, (400, 600))
     plate_image = detect_plate(image_resized)
     if plate_image is not None:
         plate_text = recognize_plate(plate_image)
